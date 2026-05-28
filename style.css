@@ -8,13 +8,13 @@
     src: url(assets/fonts/Roboto-Regular.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #36384e;
     display: flex;
     justify-content: center;
@@ -24,14 +24,15 @@ body{
     font-family: "Robot-Regular";
 }
 
-.signup{
+.signup {
     display: flex;
     background-color: white;
     border-radius: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
-.leftSide{
+.leftSide {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,43 +40,43 @@ body{
     gap: 20px;
 }
 
-.leftSide h1{
+.leftSide h1 {
     font-family: "Roboto-Bold";
     font-size: 50px;
 }
 
-ul > li{
+ul>li {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 10px;
 }
 
-ul > li > a {
+ul>li>a {
     color: black;
     text-decoration: none;
     padding: 5px 0;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 80%;
     gap: 10px;
 }
 
-form label{
+form label {
     font-size: 10px;
     font-family: "Roboto-Bold";
 }
 
-form input{
+form input {
     padding: 15px 10px;
     border-radius: 8px;
     border: 1px solid gray;
 }
 
-form input[type="submit"]{
+form input[type="submit"] {
     background-color: #242742;
     border: none;
     cursor: pointer;
@@ -84,6 +85,37 @@ form input[type="submit"]{
 }
 
 
-form input[type="submit"]:hover{
-    background: linear-gradient(to right,#ff6257,#fb1100);
-    box-shadow: 4px 7px 20px 0px red;}
+form input[type="submit"]:hover {
+    background: linear-gradient(to right, #ff6257, #fb1100);
+    box-shadow: 4px 7px 20px 0px red;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        background: white;
+        padding: 0;
+        align-content: center;
+    }
+
+    .signup {
+        margin-bottom: auto;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .rightSide {
+        width: 100%;
+        order: 1;
+    }
+
+    .leftSide {
+        order: 2;
+        padding-left: 20px;
+    }
+
+    .rightSide img {
+        width: 100%;
+        display: block;
+        padding-bottom: 20px;
+    }
+}
