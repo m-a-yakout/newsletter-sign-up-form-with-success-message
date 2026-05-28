@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Robot-Regular";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #36384e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.signup{
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.leftSide{
+    display: flex;
+    flex-direction: column;
+}

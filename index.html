@@ -8,6 +8,8 @@
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
+
+  <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
@@ -17,30 +19,37 @@
 <body>
 
   <!-- Sign-up form start -->
+   <div class="signup">
+    <div class="leftSide">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updated on:</p>
+      <ul>
+        <li>
+          <a href="#"><img src="assets/images/icon-list.svg" alt="icon-list">Product discovery and building what matters</a>
+          <a href="#"><img src="assets/images/icon-list.svg" alt="icon-list"> Measuring to ensure updates are a success</a>
+          <a href="#"><img src="assets/images/icon-list.svg" alt="icon-list"> And much more!</a>
+        </li>
+      </ul>
 
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
+      <form action="" method="post">
+        <label for="email">Email address</label>
+        <input type="email" name="E-mail" id="email" placeholder="email@company.com">
+        <input type="submit" value="Subscribe to monthly newsletter">
+      </form>
+    </div>
+    <div class="rightSide">
+      <picture>
+        <source media="(max-width: 600px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+        <source media="(max-width: 1024px)" srcset="assets/images/illustration-sign-up-tablet.svg">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration">
+      </picture>
+    </div>
+   </div>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
 
   <!-- Success message end -->
   
