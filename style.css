@@ -80,4 +80,10 @@ form input[type="submit"]{
     border: none;
     cursor: pointer;
     color: white;
+
 }
+
+
+form input[type="submit"]:hover{
+    background: linear-gradient(to right,#ff6257,#fb1100);
+    box-shadow: 4px 7px 20px 0px red;}

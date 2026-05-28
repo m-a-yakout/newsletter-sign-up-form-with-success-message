@@ -17,7 +17,7 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- Blue 800: hsl(234, 29%, 20%)
+- Blue 800: #242742
 - Blue 700: #36384e
 - Grey: hsl(0, 0%,58%)
 - White: hsl(0, 0%, 100%)
