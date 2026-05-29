@@ -112,6 +112,11 @@ form input {
     width: 100%;
 }
 
+
+#email.error::placeholder {
+    color: red;
+}
+
 .textCard {
     display: flex;
     flex-direction: column;

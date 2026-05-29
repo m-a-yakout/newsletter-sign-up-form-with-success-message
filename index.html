@@ -92,11 +92,19 @@
 
     let successPage = document.querySelector('#successPage');
     let signPage = document.querySelector('#signPage');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     BtnClick.addEventListener('click', function (e) {
       e.preventDefault();
-      emailSub.innerHTML = email.value;
-      signPage.style.display = 'none';
-      successPage.style.display = 'block';
+      if (email.value === '' || !emailRegex.test(email.value)) {
+        email.classList.add('error');
+        email.style.border = '1px solid red';
+        email.placeholder = 'Put correct email';
+        email.value = '';
+      } else {
+        emailSub.innerHTML = email.value;
+        signPage.style.display = 'none';
+        successPage.style.display = 'block';
+      }
     });
 
     subscribeBtn.addEventListener('click', function () {
