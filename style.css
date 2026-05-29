@@ -24,7 +24,7 @@ body {
     font-family: "Robot-Regular";
 }
 
-.signup {
+.page {
     display: flex;
     background-color: white;
     border-radius: 20px;
@@ -76,18 +76,47 @@ form input {
     border: 1px solid gray;
 }
 
-form input[type="submit"] {
+#BtnClick,
+#subscribeBtn {
     background-color: #242742;
     border: none;
     cursor: pointer;
     color: white;
+    padding: 15px 10px;
+    border-radius: 5px;
+    width: 100%;
 
 }
 
-
-form input[type="submit"]:hover {
+#BtnClick:hover,
+#subscribeBtn:hover {
     background: linear-gradient(to right, #ff6257, #fb1100);
     box-shadow: 4px 7px 20px 0px red;
+}
+
+.successPage {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    padding: 50px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.successPage h1 {
+    width: 50%;
+}
+
+.successPage p {
+    width: 100%;
+}
+
+.textCard {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 10px;
 }
 
 @media screen and (max-width:600px) {
@@ -97,7 +126,7 @@ form input[type="submit"]:hover {
         align-content: center;
     }
 
-    .signup {
+    .page {
         margin-bottom: auto;
         justify-content: center;
         padding: 0;
@@ -122,5 +151,16 @@ form input[type="submit"]:hover {
     .leftSide form {
         width: 90%;
         padding: 10px;
+    }
+
+    .successPage {
+        align-content: center;
+        padding: 0 10px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .textCard {
+        margin: 10% 0 100% 0;
     }
 }

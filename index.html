@@ -28,7 +28,7 @@
 <body>
 
   <!-- Sign-up form start -->
-  <div class="signup">
+  <div id="signPage" class="page">
     <div class="leftSide">
       <h1>Stay updated!</h1>
       <p>Join 60,000+ product managers receiving monthly updated on:</p>
@@ -47,10 +47,10 @@
         </li>
       </ul>
 
-      <form action="" method="post">
+      <form action="index.html" method="post">
         <label for="email">Email address</label>
         <input type="email" name="E-mail" id="email" placeholder="email@company.com">
-        <input type="submit" value="Subscribe to monthly newsletter">
+        <input id="BtnClick" type="submit" value="Subscribe to monthly newsletter">
       </form>
     </div>
     <div class="rightSide">
@@ -65,7 +65,17 @@
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
+  <div id="successPage" class="page successPage">
+    <img src="assets/images/icon-success.svg" alt="">
+    <div class="textCard">
+      <h1>Thanks for subscribing!</h1>
+      <p>a confirmation email has been sent to <b id="emailSub">ash@loremcompany.com.</b> Please open it and click the
+        button inside
+        to confirm your subscription</p>
+    </div>
+    <button id="subscribeBtn">Dismiss message</button>
 
+  </div>
 
   <!-- Success message end -->
 
@@ -73,6 +83,27 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+  <script>
+    const email = document.querySelector('#email');
+    const emailSub = document.querySelector('#emailSub');
+    const BtnClick = document.querySelector('#BtnClick');
+    const subscribeBtn = document.querySelector('#subscribeBtn');
+
+    let successPage = document.querySelector('#successPage');
+    let signPage = document.querySelector('#signPage');
+    BtnClick.addEventListener('click', function (e) {
+      e.preventDefault();
+      emailSub.innerHTML = email.value;
+      signPage.style.display = 'none';
+      successPage.style.display = 'block';
+    });
+
+    subscribeBtn.addEventListener('click', function () {
+      window.location.reload();
+    })
+
+  </script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Red: hsl(4, 100%, 67%)
+- Red: #ff6257
 
 ### Neutral
 
